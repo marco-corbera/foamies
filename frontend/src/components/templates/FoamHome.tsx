@@ -1,9 +1,5 @@
 import OrderCard from "@/components/organisms/order";
-import type {
-  IRoundItemProps,
-  IRoundProps,
-  IOrderCardProps,
-} from "@/components/organisms/order/OrderCard";
+import type { IRoundProps } from "@/components/organisms/order/OrderCard";
 
 const data = {
   created: "2024-09-10 12:00:00",
