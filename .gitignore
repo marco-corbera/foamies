@@ -1,0 +1,39 @@
+# Node.js (Frontend)
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/*.log
+frontend/*.tsbuildinfo
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Django (Backend)
+backend/*.pyc
+backend/*.pyo
+backend/*.pyd
+backend/__pycache__/
+backend/db.sqlite3
+backend/media/
+backend/staticfiles/
+backend/*.log
+backend/*.pot
+
+# Pyenv (Python version manager)
+backend/.python-version
+
+# VS Code
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# Python virtualenv
+backend/venv/
+backend/env/
+backend/.venv/
+
+# Docker
+docker-compose.override.yml

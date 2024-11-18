@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component Exports renders H1 with correct text content, tag, and snapshot 1`] = `
+<h1
+  class="font-bold text-3xl md:text-4xl leading-10 md:leading-11 col-span-full text-left"
+>
+  This is an H1 test
+</h1>
+`;
+
+exports[`Text Component Exports renders H2 with correct text content, tag, and snapshot 1`] = `
+<h2
+  class="font-extrabold text-2xl md:text-3xl leading-7 md:leading-9 col-span-full text-left"
+>
+  This is an H2 test
+</h2>
+`;
+
+exports[`Text Component Exports renders H3 with correct text content, tag, and snapshot 1`] = `
+<h3
+  class="font-semibold text-xl md:text-2xl leading-5 md:leading-8 col-span-full text-left"
+>
+  This is an H3 test
+</h3>
+`;
+
+exports[`Text Component Exports renders H4 with correct text content, tag, and snapshot 1`] = `
+<h4
+  class="font-semibold text-xl md:text-2xl md:leading-8 leading-6 tracking-[0.35rem] md:tracking-[0.5rem] col-span-full text-left"
+>
+  This is an H4 test
+</h4>
+`;
+
+exports[`Text Component Exports renders P with correct text content, tag, and snapshot 1`] = `
+<p
+  class="text-md col-span-full text-left"
+>
+  This is a P test
+</p>
+`;
+
+exports[`Text Component Exports renders Span with correct text content, tag, and snapshot 1`] = `
+<span
+  class="leading-none col-span-full text-left"
+>
+  This is a P test
+</span>
+`;

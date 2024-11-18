@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="10" failures="0" errors="0" time="1.562">
+  <testsuite name="Badge tests" errors="0" failures="0" skipped="0" timestamp="2024-11-18T14:04:47" time="0.75" tests="2">
+    <testcase classname="Badge tests Matches snapshot" name="Badge tests Matches snapshot" time="0.013">
+    </testcase>
+    <testcase classname="Badge tests should render the badge" name="Badge tests should render the badge" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Text Component Exports" errors="0" failures="0" skipped="0" timestamp="2024-11-18T14:04:47" time="0.764" tests="6">
+    <testcase classname="Text Component Exports renders H1 with correct text content, tag, and snapshot" name="Text Component Exports renders H1 with correct text content, tag, and snapshot" time="0.018">
+    </testcase>
+    <testcase classname="Text Component Exports renders H2 with correct text content, tag, and snapshot" name="Text Component Exports renders H2 with correct text content, tag, and snapshot" time="0.002">
+    </testcase>
+    <testcase classname="Text Component Exports renders H3 with correct text content, tag, and snapshot" name="Text Component Exports renders H3 with correct text content, tag, and snapshot" time="0.002">
+    </testcase>
+    <testcase classname="Text Component Exports renders H4 with correct text content, tag, and snapshot" name="Text Component Exports renders H4 with correct text content, tag, and snapshot" time="0.001">
+    </testcase>
+    <testcase classname="Text Component Exports renders P with correct text content, tag, and snapshot" name="Text Component Exports renders P with correct text content, tag, and snapshot" time="0.006">
+    </testcase>
+    <testcase classname="Text Component Exports renders Span with correct text content, tag, and snapshot" name="Text Component Exports renders Span with correct text content, tag, and snapshot" time="0.006">
+    </testcase>
+  </testsuite>
+  <testsuite name="Button tests" errors="0" failures="0" skipped="0" timestamp="2024-11-18T14:04:47" time="0.765" tests="2">
+    <testcase classname="Button tests Matches snapshot" name="Button tests Matches snapshot" time="0.014">
+    </testcase>
+    <testcase classname="Button tests should render the button" name="Button tests should render the button" time="0.022">
+    </testcase>
+  </testsuite>
+</testsuites>

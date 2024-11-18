@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge tests Matches snapshot 1`] = `
+<DocumentFragment>
+  <span
+    class="inline-block px-3 py-1 text-sm font-medium text-white rounded-full bg-secondary-500"
+  >
+    My great badge
+  </span>
+</DocumentFragment>
+`;
