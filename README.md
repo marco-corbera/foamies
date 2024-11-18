@@ -7,8 +7,8 @@ Welcome to **Foamies**, the simplest and most fun way to manage beer orders for 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
-  - [Option 1: Install with Docker - Recommended](#option-1-install-with-docker)
-  - [Option 2: Install Without Docker](#option-2-install-without-docker-traditional)
+  - [Option 1: Install with Docker - Recommended](#option-1-install-with-docker-recommended)
+  - [Option 2: Install Without Docker](#option-2-install-without-docker)
 - [Technologies Used](#technologies-used)
 - [Running the App](#running-the-app)
 - [Scripts](#scripts)
