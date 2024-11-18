@@ -1,5 +1,9 @@
 import OrderCard from "@/components/organisms/order";
-import type { IRoundItemProps, IRoundProps, IOrderCardProps } from "@/components/organisms/order/OrderCard";
+import type {
+  IRoundItemProps,
+  IRoundProps,
+  IOrderCardProps,
+} from "@/components/organisms/order/OrderCard";
 
 const data = {
   created: "2024-09-10 12:00:00",
@@ -20,7 +24,7 @@ const data = {
           name: "Club Colombia",
           price_per_unit: 1,
           total: 3,
-        }
+        },
       ],
     },
     {
@@ -45,7 +49,7 @@ const data = {
           name: "Cuzqueña",
           price_per_unit: 1.2,
           total: 3,
-        }
+        },
       ],
     },
   ],

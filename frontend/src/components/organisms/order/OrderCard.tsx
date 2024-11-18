@@ -9,7 +9,7 @@ export interface IRoundItemProps {
 }
 
 export interface IRoundProps {
-  items: IRoundItemProps[]
+  items: IRoundItemProps[];
 }
 
 export interface IOrderCardProps {
@@ -45,19 +45,23 @@ const OrderCard = ({
       <div key={index} style={{ marginBottom: "8px" }}>
         {round.items.map((item, itemIndex) => (
           <div key={itemIndex}>
-            <P>{item.name} x{item.quantity}</P>
+            <P>
+              {item.name} x{item.quantity}
+            </P>
             <P>Price per unit: ${item.price.toFixed(2)}</P>
           </div>
         ))}
         <div>
           <P>
-            Round Total: ${round.items.reduce((acc, item) => acc + (item.price * item.quantity), 0).toFixed(2)}
+            Round Total: $
+            {round.items
+              .reduce((acc, item) => acc + item.price * item.quantity, 0)
+              .toFixed(2)}
           </P>
         </div>
       </div>
     </div>
   ));
-  
 
   const footer = (
     <div>
