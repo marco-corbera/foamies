@@ -2,18 +2,22 @@ import { Card } from "@/components/molecules/card";
 import { PaidBadge, NotPaidBadge } from "../orderStatus";
 import { P, H3 } from "@/components/atoms/text";
 
-export interface IRoundProps {
+export interface IRoundItemProps {
   name: string;
   quantity: number;
   price: number;
 }
 
-interface OrderCardProps {
+export interface IRoundProps {
+  items: IRoundItemProps[]
+}
+
+export interface IOrderCardProps {
   title: string;
   subtotal: number;
   taxes: number;
   discounts: number;
-  roundItems: IRoundProps[];
+  rounds: IRoundProps[];
   paid: boolean;
 }
 
@@ -22,9 +26,9 @@ const OrderCard = ({
   subtotal,
   taxes,
   discounts,
-  roundItems,
+  rounds,
   paid,
-}: OrderCardProps) => {
+}: IOrderCardProps) => {
   const badge = paid ? <PaidBadge /> : <NotPaidBadge />;
 
   const info = (
@@ -35,17 +39,25 @@ const OrderCard = ({
     </div>
   );
 
-  const items = roundItems.map((item, index) => (
+  const items = rounds.map((round, index) => (
     <div key={index}>
       <H3>Round {index + 1}</H3>
-      <div key={index}>
-        <P>
-          {item.name} x{item.quantity}
-        </P>
-        {item.price && <P>Price: ${item.price}</P>}
+      <div key={index} style={{ marginBottom: "8px" }}>
+        {round.items.map((item, itemIndex) => (
+          <div key={itemIndex}>
+            <P>{item.name} x{item.quantity}</P>
+            <P>Price per unit: ${item.price.toFixed(2)}</P>
+          </div>
+        ))}
+        <div>
+          <P>
+            Round Total: ${round.items.reduce((acc, item) => acc + (item.price * item.quantity), 0).toFixed(2)}
+          </P>
+        </div>
       </div>
     </div>
   ));
+  
 
   const footer = (
     <div>
