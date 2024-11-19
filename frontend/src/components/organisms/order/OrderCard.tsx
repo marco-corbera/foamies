@@ -59,7 +59,7 @@ const OrderCard = ({
     <div key={index} className="rounded-lg border p-4 my-8">
       <div className="flex items-center justify-between pb-4">
         <div className="flex items-center gap-2">
-          <FaClock className="h-5 w-5 text-muted-foreground" />
+          <FaClock className="h-5 w-5" />
           <H3>Round {index + 1}</H3>
         </div>
         <P weight="semibold">
@@ -93,7 +93,7 @@ const OrderCard = ({
   const footer = (
     <div className="flex items-center justify-between pb-4 mx-2">
       <div className="flex items-center gap-2">
-        <FaReceipt className="h-5 w-5 text-muted-foreground" />
+        <FaReceipt className="h-5 w-5" />
         <P weight="bold" size="2xl">
           Total
         </P>

@@ -5,9 +5,7 @@ interface CardSummaryProps {
 }
 
 const CardBody = ({ info }: CardSummaryProps) => {
-  return (
-    <div className="px-4">{info && <div className="mb-4">{info}</div>}</div>
-  );
+  return <>{info && <div className="mb-4 px-4">{info}</div>}</>;
 };
 
 export default CardBody;
