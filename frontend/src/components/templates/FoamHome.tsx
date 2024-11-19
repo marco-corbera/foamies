@@ -141,7 +141,7 @@ const mappedRoundsData: IRoundProps[] = data.rounds.map((round) => ({
 
 const Home = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 md:w-2/3 mx-auto">
       <OrderCard
         title="Total Bill"
         subtotal={data.subtotal}

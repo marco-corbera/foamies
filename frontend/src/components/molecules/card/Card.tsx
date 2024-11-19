@@ -20,7 +20,7 @@ const Card = ({ title, badge, info, items, footer }: CardProps) => {
         <CardSummary info={info} />
       </div>
 
-      <div className="overflow-y-auto max-h-96">
+      <div className="overflow-y-auto md:max-h-128 max-h-96">
         <CardBody items={items} />
       </div>
 
