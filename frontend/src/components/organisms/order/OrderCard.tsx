@@ -1,3 +1,4 @@
+import { FaBeer, FaClock, FaReceipt } from "react-icons/fa";
 import { Card } from "@/components/molecules/card";
 import { PaidBadge, NotPaidBadge } from "../orderStatus";
 import { P, H3 } from "@/components/atoms/text";
@@ -55,32 +56,51 @@ const OrderCard = ({
   );
 
   const items = rounds.map((round, index) => (
-    <div key={index} className="p-4">
-      <H3>Round {index + 1}</H3>
-      <div key={index} style={{ marginBottom: "8px" }}>
-        {round.items.map((item, itemIndex) => (
-          <div key={itemIndex}>
-            <P>
-              {item.name} x{item.quantity}
-            </P>
-            <P>Price per unit: ${item.price.toFixed(2)}</P>
-          </div>
-        ))}
-        <div>
-          <P>
-            Round Total: $
-            {round.items
-              .reduce((acc, item) => acc + item.price * item.quantity, 0)
-              .toFixed(2)}
-          </P>
+    <div key={index} className="rounded-lg border p-4 my-8">
+      <div className="flex items-center justify-between pb-4">
+        <div className="flex items-center gap-2">
+          <FaClock className="h-5 w-5 text-muted-foreground" />
+          <H3>Round {index + 1}</H3>
+        </div>
+        <P weight="semibold">
+          $
+          {round.items
+            .reduce((acc, item) => acc + item.price * item.quantity, 0)
+            .toFixed(2)}
+        </P>
+      </div>
+      <div className="space-y-6">
+        <div className="space-y-2">
+          {round.items.map((item, itemIndex) => (
+            <div
+              key={itemIndex}
+              className="flex items-center justify-between text-sm"
+            >
+              <div className="flex items-center gap-2">
+                <FaBeer className="h-4 w-4" />
+                <span>
+                  {item.name} x{item.quantity}
+                </span>
+              </div>
+              <p>${item.price.toFixed(2)} c/u</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   ));
 
   const footer = (
-    <div>
-      <P>Total: ${subtotal + taxes - discounts}</P>
+    <div className="flex items-center justify-between pb-4 mx-2">
+      <div className="flex items-center gap-2">
+        <FaReceipt className="h-5 w-5 text-muted-foreground" />
+        <P weight="bold" size="2xl">
+          Total
+        </P>
+      </div>
+      <P weight="bold" size="2xl">
+        ${subtotal + taxes - discounts}
+      </P>
     </div>
   );
 

@@ -7,7 +7,7 @@ interface CardBodyProps {
 
 const CardBody = ({ info, items }: CardBodyProps) => {
   return (
-    <div className="p-4">
+    <div className="px-4 py-0">
       {info && <div className="mb-4">{info}</div>}
       <div>{items}</div>
     </div>

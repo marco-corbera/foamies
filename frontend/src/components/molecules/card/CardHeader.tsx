@@ -8,7 +8,7 @@ interface CardHeaderProps {
 
 const CardHeader = ({ title, badge }: CardHeaderProps) => {
   return (
-    <div className="flex items-center justify-between p-4">
+    <div className="flex items-center justify-between p-4 mx-2">
       <H2 className="text-2xl font-semibold">{title}</H2>
       <div>{badge}</div>
     </div>
