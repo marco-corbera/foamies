@@ -35,15 +35,21 @@ const OrderCard = ({
     <div className="rounded-lg bg-slate-200 p-4 grid grid-cols-3 gap-4">
       <div className="flex flex-col">
         <P>Subtotal:</P>
-        <P weight="semibold" size="xl">${subtotal}</P>
+        <P weight="semibold" size="xl">
+          ${subtotal}
+        </P>
       </div>
       <div className="flex flex-col">
         <P>Taxes:</P>
-        <P weight="semibold" size="xl">${taxes}</P>
+        <P weight="semibold" size="xl">
+          ${taxes}
+        </P>
       </div>
       <div className="flex flex-col">
         <P>Discounts:</P>
-        <P weight="semibold" size="xl" className="text-green-600">${discounts}</P>
+        <P weight="semibold" size="xl" className="text-green-600">
+          ${discounts}
+        </P>
       </div>
     </div>
   );
