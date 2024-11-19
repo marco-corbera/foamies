@@ -1,8 +1,8 @@
 import { twMerge } from "tailwind-merge";
-import type { Size } from "@/types";
 
 type Type = "h1" | "h2" | "h3" | "h4" | "p" | "span";
 type Weight = "light" | "normal" | "semibold" | "bold" | "extrabold" | "black";
+type Size = "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl";
 
 interface Props {
   weight?: Weight;

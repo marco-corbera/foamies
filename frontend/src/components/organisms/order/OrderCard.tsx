@@ -32,15 +32,24 @@ const OrderCard = ({
   const badge = paid ? <PaidBadge /> : <NotPaidBadge />;
 
   const info = (
-    <div>
-      <P>Subtotal: ${subtotal}</P>
-      <P>Taxes: ${taxes}</P>
-      <P>Discounts: ${discounts}</P>
+    <div className="rounded-lg bg-slate-200 p-4 grid grid-cols-3 gap-4">
+      <div className="flex flex-col">
+        <P>Subtotal:</P>
+        <P weight="semibold" size="xl">${subtotal}</P>
+      </div>
+      <div className="flex flex-col">
+        <P>Taxes:</P>
+        <P weight="semibold" size="xl">${taxes}</P>
+      </div>
+      <div className="flex flex-col">
+        <P>Discounts:</P>
+        <P weight="semibold" size="xl" className="text-green-600">${discounts}</P>
+      </div>
     </div>
   );
 
   const items = rounds.map((round, index) => (
-    <div key={index}>
+    <div key={index} className="p-4">
       <H3>Round {index + 1}</H3>
       <div key={index} style={{ marginBottom: "8px" }}>
         {round.items.map((item, itemIndex) => (
