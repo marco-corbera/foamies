@@ -10,6 +10,9 @@ services:
       - ./backend/djangoapp:/app
     depends_on:
       - frontend
+    environment:
+      - DJANGO_SETTINGS_MODULE=backfoam.settings
+      - PYTHONPATH=/app
 
   frontend:
     build:
