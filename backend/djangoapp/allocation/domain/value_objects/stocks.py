@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from datetime import date
-from typing import List, Dict
+from typing import List, Dict, Union
 from allocation.domain.value_objects.beers import Beer
 
 
@@ -8,7 +8,7 @@ from allocation.domain.value_objects.beers import Beer
 class StockItem:
     beer: Beer
     quantity: int
-    _flattened: Dict[str, int] = field(init=False, repr=False)
+    _flattened: Dict[str, Union[str, float, int]] = field(init=False, repr=False)
 
     def __post_init__(self):
         object.__setattr__(
