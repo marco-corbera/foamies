@@ -11,7 +11,7 @@ Welcome to **Foamies**, the simplest and most fun way to manage beer orders for 
   - [Option 2: Install Without Docker]
 - [Technologies Used](#technologies-used)
 - [Running the App](#running-the-app)
-- [Scripts](#scripts)
+- [Scripts(tests included)](#scripts)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -123,7 +123,6 @@ The backend API will now be running on http://localhost:8000.
 - Django
 - Django REST Framework
 - Python 3.13
-- Docker: For containerized deployment
 
 ---
 
@@ -134,13 +133,16 @@ After completing the installation process, the app can be accessed in the browse
 - **Frontend (React app)**: `http://localhost:3000`
 - **Backend (Django API)**: `http://localhost:8000`
 
-You can interact with the app, view orders, and check out the latest beer prices and payments.
+You can interact with the app by viewing the current order by making an **HTTP** request to the following endpoint using the **GET** method:
+```bash
+http;//localhost:8000/api/order
+```
 
 ---
 
 ## Scripts
 
-The following scripts are available in the project’s `package.json`:
+The following scripts are available in the project’s `package.json` for the frontend side:
 
 - **dev**: Start the development server for the frontend:
   ```bash
@@ -166,6 +168,39 @@ The following scripts are available in the project’s `package.json`:
   ```bash
   npm run format:check
   ```
+- **test**: Run tests:
+  ```bash
+  npm run test
+  ```
+
+To run script in the backend we can use the following:
+- **black .**: Formats our code
+  ```bash
+  black .
+  ```
+- **flake8**: To check our code's style
+  ```bash
+  flake8
+  ```
+- **pytest**: To run our tests
+  ```bash
+  pytest
+  ```
+
+
+To run them in the container we can do something like this example:
+```bash
+docker compose run --rm frontend npm run lint
+```
+
+```bash
+docker compose run --rm backend pytest
+```
+
+Or if we have the container already running we can just write
+```bash
+docker compose exec frontend npm run lint
+```
 
 ## Contributing
 We welcome contributions! Here’s how you can help:
