@@ -140,7 +140,7 @@ You can interact with the app, view orders, and check out the latest beer prices
 
 ## Scripts
 
-The following scripts are available in the project’s `package.json`:
+The following scripts are available in the project’s `package.json` for the frontend side:
 
 - **dev**: Start the development server for the frontend:
   ```bash
@@ -166,6 +166,36 @@ The following scripts are available in the project’s `package.json`:
   ```bash
   npm run format:check
   ```
+- **test**: Run tests:
+  ```bash
+  npm run test
+  ```
+
+To run script in the backend we can use the following:
+- **Code formatter**: Formats our code
+  ```bash
+  black .
+  ```
+- **Style code**: To check our code's style
+  ```bash
+  flake8
+  ```
+
+
+
+To run them in the container we can do something like this example:
+```bash
+docker compose run --rm frontend npm run lint
+```
+
+```bash
+docker compose run --rm backend black .
+```
+
+Or if we have the container already running we can just write
+```bash
+docker compose exec frontend npm run lint
+```
 
 ## Contributing
 We welcome contributions! Here’s how you can help:
