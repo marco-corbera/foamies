@@ -1,12 +1,8 @@
 import React from "react";
-import { Span } from "@/components/atoms/text";
+import Badge from "@/components/atoms/badge";
 
 const PaidBadge = () => {
-  return (
-    <Span className="bg-green-500 text-white py-1 px-3 rounded-full text-sm">
-      Paid
-    </Span>
-  );
+  return <Badge text={"Paid"} bgColor={"bg-green-500"} />;
 };
 
 export default PaidBadge;
