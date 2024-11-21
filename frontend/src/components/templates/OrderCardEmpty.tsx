@@ -2,7 +2,7 @@
 import { P } from "@/components/atoms/text";
 import Button from "@/components/atoms/button";
 
-const EmptyCard = () => {
+const EmptyState = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <P className="text-gray-500 text-lg">There is not available data.</P>
@@ -16,4 +16,4 @@ const EmptyCard = () => {
   );
 };
 
-export default EmptyCard;
+export default EmptyState;
