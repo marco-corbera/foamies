@@ -1,4 +1,5 @@
 import React from "react";
+import { Span } from "@/components/atoms/text";
 
 interface BadgeProps {
   text: string;
@@ -12,11 +13,12 @@ const Badge: React.FC<BadgeProps> = ({
   className = "",
 }) => {
   return (
-    <span
-      className={`inline-block px-3 py-1 text-sm font-medium text-white rounded-full ${bgColor} ${className}`}
+    <Span
+      size="sm"
+      className={`inline-block px-3 py-1 text-white rounded-full ${bgColor} ${className}`}
     >
       {text}
-    </span>
+    </Span>
   );
 };
 

@@ -1,7 +1,7 @@
 import { FaBeer, FaClock, FaReceipt } from "react-icons/fa";
 import { Card } from "@/components/molecules/card";
 import { PaidBadge, NotPaidBadge } from "../orderStatus";
-import { P, H3 } from "@/components/atoms/text";
+import { P, H3, Span } from "@/components/atoms/text";
 
 export interface IRoundItemProps {
   name: string;
@@ -78,11 +78,14 @@ const OrderCard = ({
             >
               <div className="flex items-center gap-2">
                 <FaBeer className="h-4 w-4" />
-                <span>
+                <Span>
                   {item.name} x{item.quantity}
-                </span>
+                </Span>
               </div>
-              <p>${item.price.toFixed(2)} c/u</p>
+              <div className="flex flex-row gap-6">
+                <P>${item.price.toFixed(2)} c/u</P>
+                <P>Total: ${(item.price * item.quantity).toFixed(2)}</P>
+              </div>
             </div>
           ))}
         </div>
