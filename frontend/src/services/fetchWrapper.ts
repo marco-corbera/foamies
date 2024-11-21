@@ -1,5 +1,3 @@
-export type Method = "GET";
-
 interface Fetch {
   endpoint: string;
 }
