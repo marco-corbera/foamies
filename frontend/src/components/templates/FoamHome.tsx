@@ -1,157 +1,32 @@
+import { IOrderData } from '@/types/apiData'
 import OrderCard from "@/components/organisms/order";
-import type { IRoundProps } from "@/components/organisms/order/OrderCard";
 
-const data = {
-  created: "2024-09-10 12:00:00",
-  paid: false,
-  subtotal: 18.9,
-  taxes: 4.5,
-  discounts: 5.0,
-  rounds: [
-    {
-      created: "2024-09-10 12:00:30",
-      items: [
-        {
-          name: "Corona",
-          price_per_unit: 1.5,
-          total: 3,
-        },
-        {
-          name: "Club Colombia",
-          price_per_unit: 1,
-          total: 3,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:20:31",
-      items: [
-        {
-          name: "Club Colombia",
-          price_per_unit: 1.8,
-          total: 3,
-        },
-        {
-          name: "Quilmes",
-          price_per_unit: 1.2,
-          total: 2,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:43:21",
-      items: [
-        {
-          name: "Cuzqueña",
-          price_per_unit: 1.2,
-          total: 3,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:00:30",
-      items: [
-        {
-          name: "Corona",
-          price_per_unit: 1.5,
-          total: 3,
-        },
-        {
-          name: "Club Colombia",
-          price_per_unit: 1,
-          total: 3,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:20:31",
-      items: [
-        {
-          name: "Club Colombia",
-          price_per_unit: 1.8,
-          total: 3,
-        },
-        {
-          name: "Quilmes",
-          price_per_unit: 1.2,
-          total: 2,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:43:21",
-      items: [
-        {
-          name: "Cuzqueña",
-          price_per_unit: 1.2,
-          total: 3,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:00:30",
-      items: [
-        {
-          name: "Corona",
-          price_per_unit: 1.5,
-          total: 3,
-        },
-        {
-          name: "Club Colombia",
-          price_per_unit: 1,
-          total: 3,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:20:31",
-      items: [
-        {
-          name: "Club Colombia",
-          price_per_unit: 1.8,
-          total: 3,
-        },
-        {
-          name: "Quilmes",
-          price_per_unit: 1.2,
-          total: 2,
-        },
-      ],
-    },
-    {
-      created: "2024-09-10 12:43:21",
-      items: [
-        {
-          name: "Cuzqueña",
-          price_per_unit: 1.2,
-          total: 3,
-        },
-      ],
-    },
-  ],
-};
+interface FoamHomeProps {
+  orderData: IOrderData
+}
 
-const mappedRoundsData: IRoundProps[] = data.rounds.map((round) => ({
-  items: round.items.map((item) => ({
-    name: item.name,
-    price: item.price_per_unit,
-    quantity: item.total,
-  })),
-}));
+const FoamHome = ({ orderData }: FoamHomeProps) => {
+  const mappedRoundsData = orderData?.rounds?.map((round) => ({
+    items: round.items.map((item) => ({
+      name: item.name,
+      price: item.price_per_unit,
+      quantity: item.total,
+    })),
+  })) || [];
+  
 
-const Home = () => {
   return (
     <div className="p-4 md:w-2/3 mx-auto">
       <OrderCard
         title="Total Bill"
-        subtotal={data.subtotal}
-        taxes={data.taxes}
-        discounts={data.discounts}
+        subtotal={orderData?.subtotal}
+        taxes={orderData?.taxes}
+        discounts={orderData?.discounts}
         rounds={mappedRoundsData}
-        paid={data.paid}
+        paid={orderData?.paid}
       />
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default FoamHome

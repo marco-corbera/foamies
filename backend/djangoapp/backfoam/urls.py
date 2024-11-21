@@ -21,5 +21,5 @@ from backfoam.views import OrderView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("order/", OrderView.as_view(), name="order-list"),
+    path("api/order/", OrderView.as_view(), name="order-list"),
 ]
