@@ -1,19 +1,19 @@
-import { IOrderData } from '@/types/apiData'
+import { IOrderData } from "@/types/apiData";
 import OrderCard from "@/components/organisms/order";
 
 interface FoamHomeProps {
-  orderData: IOrderData
+  orderData: IOrderData;
 }
 
 const FoamHome = ({ orderData }: FoamHomeProps) => {
-  const mappedRoundsData = orderData?.rounds?.map((round) => ({
-    items: round.items.map((item) => ({
-      name: item.name,
-      price: item.price_per_unit,
-      quantity: item.total,
-    })),
-  })) || [];
-  
+  const mappedRoundsData =
+    orderData?.rounds?.map((round) => ({
+      items: round.items.map((item) => ({
+        name: item.name,
+        price: item.price_per_unit,
+        quantity: item.total,
+      })),
+    })) || [];
 
   return (
     <div className="p-4 md:w-2/3 mx-auto">
@@ -26,7 +26,7 @@ const FoamHome = ({ orderData }: FoamHomeProps) => {
         paid={orderData?.paid}
       />
     </div>
-  )
-}
+  );
+};
 
-export default FoamHome
+export default FoamHome;
