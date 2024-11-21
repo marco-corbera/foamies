@@ -123,7 +123,6 @@ The backend API will now be running on http://localhost:8000.
 - Django
 - Django REST Framework
 - Python 3.13
-- Docker: For containerized deployment
 
 ---
 
@@ -134,7 +133,10 @@ After completing the installation process, the app can be accessed in the browse
 - **Frontend (React app)**: `http://localhost:3000`
 - **Backend (Django API)**: `http://localhost:8000`
 
-You can interact with the app, view orders, and check out the latest beer prices and payments.
+You can interact with the app by viewing the current order by making an **HTTP** request to the following endpoint using the **GET** method:
+```bash
+http;//localhost:8000/api/order
+```
 
 ---
 
