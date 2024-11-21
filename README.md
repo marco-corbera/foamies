@@ -172,15 +172,15 @@ The following scripts are available in the project’s `package.json` for the fr
   ```
 
 To run script in the backend we can use the following:
-- **Code formatter**: Formats our code
+- **black .**: Formats our code
   ```bash
   black .
   ```
-- **Style code**: To check our code's style
+- **flake8**: To check our code's style
   ```bash
   flake8
   ```
-- **Run tests**: To run our tests
+- **pytest**: To run our tests
   ```bash
   pytest
   ```
