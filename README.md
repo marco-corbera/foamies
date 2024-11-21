@@ -180,7 +180,10 @@ To run script in the backend we can use the following:
   ```bash
   flake8
   ```
-
+- **Run tests**: To run our tests
+  ```bash
+  pytest
+  ```
 
 
 To run them in the container we can do something like this example:
@@ -189,7 +192,7 @@ docker compose run --rm frontend npm run lint
 ```
 
 ```bash
-docker compose run --rm backend black .
+docker compose run --rm backend pytest
 ```
 
 Or if we have the container already running we can just write
