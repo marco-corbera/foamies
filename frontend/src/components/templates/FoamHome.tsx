@@ -1,11 +1,14 @@
 import { IOrderData } from "@/types/apiData";
 import OrderCard from "@/components/organisms/order";
+import EmptyCard from "@/components/organisms/order/OrderCardEmpty";
 
 interface FoamHomeProps {
   orderData: IOrderData;
 }
 
 const FoamHome = ({ orderData }: FoamHomeProps) => {
+  if (!orderData.rounds.length) return <EmptyCard />;
+
   const mappedRoundsData =
     orderData?.rounds?.map((round) => ({
       items: round.items.map((item) => ({
