@@ -1,5 +1,5 @@
 from dataclasses import dataclass, field
-from typing import Dict
+from typing import Dict, Union
 from allocation.domain.value_objects.beers import Beer
 
 
@@ -7,7 +7,7 @@ from allocation.domain.value_objects.beers import Beer
 class RoundItem:
     beer: Beer
     total: int
-    _flattened: Dict[str, int] = field(init=False, repr=False)
+    _flattened: Dict[str, Union[str, float, int]] = field(init=False, repr=False)
 
     def __post_init__(self):
         object.__setattr__(

@@ -8,7 +8,7 @@ from backfoam.serializers import OrderSerializer
 
 
 class OrderView(APIView):
-    def get(self, request):
+    def get(self, request, *args, **kwargs):
         """Handle GET requests to retrieve the order."""
         order_repo = OrderRepository()
         order_service = OrderService(order_repo)
