@@ -11,7 +11,7 @@ Welcome to **Foamies**, the simplest and most fun way to manage beer orders for 
   - [Option 2: Install Without Docker]
 - [Technologies Used](#technologies-used)
 - [Running the App](#running-the-app)
-- [Scripts](#scripts)
+- [Scripts(tests included)](#scripts)
 - [Contributing](#contributing)
 - [License](#license)
 
