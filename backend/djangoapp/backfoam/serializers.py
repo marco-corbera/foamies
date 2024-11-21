@@ -17,4 +17,5 @@ class OrderSerializer(serializers.Serializer):
     paid = serializers.BooleanField()
     subtotal = serializers.FloatField()
     taxes = serializers.FloatField()
+    discounts = serializers.FloatField()
     rounds = RoundSerializer(many=True)

@@ -27,7 +27,7 @@ class OrderService:
             subtotal=order["subtotal"],
             taxes=tax,
             rounds=order["rounds"],
-            discount=order["discounts"],
+            discounts=order["discounts"],
         )
 
     def _calculate_tax(self, subtotal: float) -> float:

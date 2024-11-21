@@ -9,5 +9,5 @@ class Order:
     paid: float
     subtotal: float
     taxes: float
-    discount: float
+    discounts: float
     rounds: Round

@@ -99,7 +99,7 @@ const OrderCard = ({
         </P>
       </div>
       <P weight="bold" size="2xl">
-        ${subtotal + taxes - discounts}
+        ${(subtotal + taxes - discounts).toFixed(2)}
       </P>
     </div>
   );
