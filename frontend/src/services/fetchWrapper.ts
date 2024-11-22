@@ -1,5 +1,6 @@
 interface Fetch {
   endpoint: string;
+  isServer: boolean;
 }
 
 export interface Response {
@@ -9,9 +10,9 @@ export interface Response {
   error?: string;
 }
 
-const baseURL: string = "http://backend:8000";
+export const FETCH = async ({ endpoint, isServer = true }: Fetch): Promise<Response> => {
+  const baseURL: string = isServer ? "http://backend:8000" : "http://localhost:8000"
 
-export const FETCH = async ({ endpoint }: Fetch): Promise<Response> => {
   try {
     const response = await fetch(`${baseURL}${endpoint}`);
 

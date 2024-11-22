@@ -1,9 +1,10 @@
 import { FETCH } from "@/services/fetchWrapper";
 
-const getOrderStatus = async (id: string) => {
+const getOrderStatus = async (id: string, isServer: boolean = true) => {
   try {
     const response = await FETCH({
-      endpoint: `/api/orders/${id}`
+      endpoint: `/api/orders/${id}`,
+      isServer
     });
     if (response.ok) {
       return response.data;
@@ -16,10 +17,11 @@ const getOrderStatus = async (id: string) => {
   }
 };
 
-const getOrders = async () => {
+const getOrders = async (isServer: boolean = true) => {
   try {
     const response = await FETCH({
-      endpoint: "/api/orders"
+      endpoint: "/api/orders",
+      isServer
     });
     if (response.ok) {
       return response.data;

@@ -14,9 +14,6 @@ export default {
         primary: "#FFD700",
         secondary: "#3498db",
       },
-      spacing: {
-        128: "32rem",
-      },
     },
   },
   plugins: [],

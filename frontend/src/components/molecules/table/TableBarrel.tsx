@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Circle from "@/components/atoms/circle";
 import Label from "@/components/atoms/label";
@@ -6,12 +7,20 @@ import Badge from "@/components/atoms/badge";
 interface TableBarrelProps {
   tableNumber: string;
   isPaid: boolean;
+  onTableClick?: (tableNumber: string) => void;
 }
 
-const TableBarrel: React.FC<TableBarrelProps> = ({ tableNumber, isPaid }) => (
-  <Circle
+const TableBarrel: React.FC<TableBarrelProps> = ({ tableNumber, isPaid, onTableClick }) => {
+  const handleClick = () => {
+    if (onTableClick) {
+      onTableClick(tableNumber); // Pass the table number to the parent handler
+    }
+  };
+
+  return (<Circle
     className={`relative ${isPaid ? "bg-green-500" : "bg-red-500"} shadow-lg`}
     size="xl"
+    onClick={handleClick}
   >
     <Badge
       size="xl"
@@ -24,6 +33,6 @@ const TableBarrel: React.FC<TableBarrelProps> = ({ tableNumber, isPaid }) => (
       </Label>
     </div>
   </Circle>
-);
+);}
 
 export default TableBarrel;

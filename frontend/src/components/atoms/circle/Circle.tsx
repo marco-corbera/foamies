@@ -1,15 +1,18 @@
+'use client'
 import React from "react";
 
 interface CircleProps {
   children: React.ReactNode;
   className?: string;
   size?: "sm" | "md" | "lg" | "xl";
+  onClick?: () => void;
 }
 
 const Circle: React.FC<CircleProps> = ({
   children,
   className = "",
   size = "md",
+  onClick
 }) => {
   const sizeClasses = {
     sm: "w-16 h-16",
@@ -21,6 +24,7 @@ const Circle: React.FC<CircleProps> = ({
   return (
     <div
       className={`rounded-full flex items-center justify-center ${sizeClasses[size]} ${className}`}
+      onClick={onClick}
     >
       {children}
     </div>
