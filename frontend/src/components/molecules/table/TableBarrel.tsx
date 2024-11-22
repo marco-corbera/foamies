@@ -23,7 +23,7 @@ const TableBarrel: React.FC<TableBarrelProps> = ({
 
   return (
     <Circle
-      className={`relative ${isPaid ? "bg-green-500" : "bg-red-500"} shadow-lg`}
+      className={`relative ${isPaid ? "bg-green-500" : "bg-red-500"} shadow-lg cursor-pointer`}
       size="xl"
       onClick={handleClick}
     >
