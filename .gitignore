@@ -16,7 +16,7 @@ backend/*.pyc
 backend/*.pyo
 backend/*.pyd
 backend/__pycache__/
-backend/backfoam/__pycache__
+backend/**/*/__pycache__
 backend/**/*.pyc
 backend/**/*.pyo
 backend/**/*.pyd
