@@ -24,6 +24,7 @@ backend/media/
 backend/staticfiles/
 backend/*.log
 backend/*.pot
+db.sqlite3
 
 # Pyenv (Python version manager)
 backend/.python-version
