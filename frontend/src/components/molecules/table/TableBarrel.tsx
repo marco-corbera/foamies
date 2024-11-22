@@ -17,7 +17,7 @@ const TableBarrel: React.FC<TableBarrelProps> = ({
 }) => {
   const handleClick = () => {
     if (onTableClick) {
-      onTableClick(tableNumber); // Pass the table number to the parent handler
+      onTableClick(tableNumber);
     }
   };
 
