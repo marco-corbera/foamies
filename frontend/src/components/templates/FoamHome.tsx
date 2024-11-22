@@ -64,7 +64,7 @@ const FoamHome: React.FC = () => {
 
       {selectedTable && !loadingOrderData && orderData && (
         <OrderCard
-          title="Total Bill"
+          title={`Total Bill Table ${selectedTable}`}
           subtotal={orderData.subtotal}
           taxes={orderData.taxes}
           discounts={orderData.discounts}
