@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import Circle from "@/components/atoms/circle";
 import Label from "@/components/atoms/label";
@@ -10,29 +10,35 @@ interface TableBarrelProps {
   onTableClick?: (tableNumber: string) => void;
 }
 
-const TableBarrel: React.FC<TableBarrelProps> = ({ tableNumber, isPaid, onTableClick }) => {
+const TableBarrel: React.FC<TableBarrelProps> = ({
+  tableNumber,
+  isPaid,
+  onTableClick,
+}) => {
   const handleClick = () => {
     if (onTableClick) {
       onTableClick(tableNumber); // Pass the table number to the parent handler
     }
   };
 
-  return (<Circle
-    className={`relative ${isPaid ? "bg-green-500" : "bg-red-500"} shadow-lg`}
-    size="xl"
-    onClick={handleClick}
-  >
-    <Badge
+  return (
+    <Circle
+      className={`relative ${isPaid ? "bg-green-500" : "bg-red-500"} shadow-lg`}
       size="xl"
-      text={tableNumber}
-      className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-white/20 px-4 py-1 rounded-full text-white"
-    />
-    <div className="flex flex-col items-center justify-center h-full">
-      <Label className="text-white text-lg font-medium">
-        {isPaid ? "Paid" : "Not paid"}
-      </Label>
-    </div>
-  </Circle>
-);}
+      onClick={handleClick}
+    >
+      <Badge
+        size="xl"
+        text={tableNumber}
+        className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-white/20 px-4 py-1 rounded-full text-white"
+      />
+      <div className="flex flex-col items-center justify-center h-full">
+        <Label className="text-white text-lg font-medium">
+          {isPaid ? "Paid" : "Not paid"}
+        </Label>
+      </div>
+    </Circle>
+  );
+};
 
 export default TableBarrel;

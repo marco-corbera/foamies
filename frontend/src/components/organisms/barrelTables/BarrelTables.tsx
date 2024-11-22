@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 import TableBarrel from "@/components/molecules/table/TableBarrel";
 import { H1, H3 } from "@/components/atoms/text";
@@ -11,10 +11,14 @@ interface Order {
 interface BarrelTablesProps {
   orders: Order[];
   onTableClick: (id: string) => void;
-  className?: string
+  className?: string;
 }
 
-const BarrelTables: React.FC<BarrelTablesProps> = ({ orders, onTableClick, className = "" }) => {
+const BarrelTables: React.FC<BarrelTablesProps> = ({
+  orders,
+  onTableClick,
+  className = "",
+}) => {
   return (
     <div className={`p-8 bg-white ${className}`}>
       <H1 className="text-3xl font-bold text-primary">Foamies</H1>
@@ -22,7 +26,11 @@ const BarrelTables: React.FC<BarrelTablesProps> = ({ orders, onTableClick, class
       <div className="flex overflow-x-auto">
         {orders?.map((order) => (
           <div key={order.id} className="flex-none p-4">
-            <TableBarrel tableNumber={order.id} isPaid={order.paid} onTableClick={onTableClick} />
+            <TableBarrel
+              tableNumber={order.id}
+              isPaid={order.paid}
+              onTableClick={onTableClick}
+            />
           </div>
         ))}
       </div>

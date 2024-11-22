@@ -4,7 +4,7 @@ const getOrderStatus = async (id: string, isServer: boolean = true) => {
   try {
     const response = await FETCH({
       endpoint: `/api/orders/${id}`,
-      isServer
+      isServer,
     });
     if (response.ok) {
       return response.data;
@@ -21,7 +21,7 @@ const getOrders = async (isServer: boolean = true) => {
   try {
     const response = await FETCH({
       endpoint: "/api/orders",
-      isServer
+      isServer,
     });
     if (response.ok) {
       return response.data;

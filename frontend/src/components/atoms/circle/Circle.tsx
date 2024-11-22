@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React from "react";
 
 interface CircleProps {
@@ -12,7 +12,7 @@ const Circle: React.FC<CircleProps> = ({
   children,
   className = "",
   size = "md",
-  onClick
+  onClick,
 }) => {
   const sizeClasses = {
     sm: "w-16 h-16",

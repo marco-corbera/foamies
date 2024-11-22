@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState, useEffect } from "react";
 import { getOrders, getOrderStatus } from "@/services/apiClient";
 import OrderCard from "@/components/organisms/order";
@@ -9,7 +9,7 @@ import type { IOrders, IOrderData } from "@/types/apiData";
 
 const FoamHome: React.FC = () => {
   const [orders, setOrders] = useState<IOrders[]>([]);
-  const [selectedTable, setSelectedTable] = useState<string | null>(null)
+  const [selectedTable, setSelectedTable] = useState<string | null>(null);
   const [orderData, setOrderData] = useState<IOrderData | null>(null);
   const [loadingOrders, setLoadingOrders] = useState(false);
   const [loadingOrderData, setLoadingOrderData] = useState(false);
@@ -38,7 +38,10 @@ const FoamHome: React.FC = () => {
         const data = await getOrderStatus(selectedTable, false);
         setOrderData(data as IOrderData);
       } catch (error) {
-        console.error(`Error on getting order for table ${selectedTable}:`, error);
+        console.error(
+          `Error on getting order for table ${selectedTable}:`,
+          error,
+        );
       } finally {
         setLoadingOrderData(false);
       }
@@ -51,7 +54,11 @@ const FoamHome: React.FC = () => {
 
   return (
     <div className="p-4 md:w-2/3 mx-auto">
-      <BarrelTables orders={orders} onTableClick={(tableNumber: string) => setSelectedTable(tableNumber)} className="mb-4 rounded-lg"/>
+      <BarrelTables
+        orders={orders}
+        onTableClick={(tableNumber: string) => setSelectedTable(tableNumber)}
+        className="mb-4 rounded-lg"
+      />
 
       {selectedTable && loadingOrderData && <div>Loading order...</div>}
 
