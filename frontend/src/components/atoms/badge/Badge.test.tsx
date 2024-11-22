@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Badge from "./Badge";
+import Badge from "@/components/atoms/badge";
 
 describe("Badge tests", () => {
   it("Matches snapshot", () => {

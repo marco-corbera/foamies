@@ -17,3 +17,8 @@ export type IOrderData = {
   discounts: number;
   rounds: Round[];
 };
+
+export type IOrders = {
+  id: string;
+  paid: boolean;
+};

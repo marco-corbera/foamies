@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import Button from "./Button";
+import Button from "@/components/atoms/button";
 
 describe("Button tests", () => {
   it("Matches snapshot", () => {

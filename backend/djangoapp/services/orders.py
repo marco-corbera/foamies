@@ -19,7 +19,7 @@ class OrderService:
         Returns all orders in a list format with their ids.
         """
         orders_dict = self.order_repo.get_all()
-        return [{"id": order_id} for order_id, order in orders_dict.items()]
+        return [{"id": order_id, "paid": order.paid } for order_id, order in orders_dict.items()]
 
     def _get_order_with_tax(self, id) -> Order:
         """

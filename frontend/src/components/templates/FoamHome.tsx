@@ -1,12 +1,14 @@
-import { IOrderData } from "@/types/apiData";
+import { IOrderData, IOrders } from "@/types/apiData";
 import OrderCard from "@/components/organisms/order";
 import EmptyState from "@/components/templates/OrderCardEmpty";
+import BarrelTables from "@/components/organisms/barrelTables/BarrelTables";
 
 interface FoamHomeProps {
+  orders: IOrders[];
   orderData: IOrderData;
 }
 
-const FoamHome = ({ orderData }: FoamHomeProps) => {
+const FoamHome = ({ orders, orderData }: FoamHomeProps) => {
   if (!orderData.rounds.length) return <EmptyState />;
 
   const mappedRoundsData =
@@ -20,6 +22,8 @@ const FoamHome = ({ orderData }: FoamHomeProps) => {
 
   return (
     <div className="p-4 md:w-2/3 mx-auto">
+      <BarrelTables orders={orders} />
+
       <OrderCard
         title="Total Bill"
         subtotal={orderData?.subtotal}

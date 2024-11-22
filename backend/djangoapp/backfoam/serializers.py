@@ -23,3 +23,4 @@ class OrderSerializer(serializers.Serializer):
 
 class OrderListSerializer(serializers.Serializer):
     id = serializers.IntegerField()
+    paid = serializers.BooleanField()

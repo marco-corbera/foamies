@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import React from "react";
 
-import { H1, H2, H3, H4, P, Span } from "./Text";
+import { H1, H2, H3, H4, P, Span } from "@/components/atoms/text";
 
 describe("Text Component Exports", () => {
   test("renders H1 with correct text content, tag, and snapshot", () => {
