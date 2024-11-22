@@ -15,8 +15,7 @@ frontend/junit.xml
 backend/*.pyc
 backend/*.pyo
 backend/*.pyd
-backend/__pycache__/
-backend/**/*/__pycache__
+backend/djangoapp/__pycache__/
 backend/**/*.pyc
 backend/**/*.pyo
 backend/**/*.pyd
