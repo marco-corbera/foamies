@@ -135,7 +135,10 @@ After completing the installation process, the app can be accessed in the browse
 
 You can interact with the app by viewing the current order by making an **HTTP** request to the following endpoint using the **GET** method:
 ```bash
-http;//localhost:8000/api/order
+http;//localhost:8000/api/orders
+```
+```bash
+http;//localhost:8000/api/orders/<order_id>
 ```
 
 ---
