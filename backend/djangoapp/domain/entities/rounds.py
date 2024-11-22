@@ -1,10 +1,10 @@
 from dataclasses import dataclass
-from datetime import date
+from datetime import datetime
 from typing import List
-from allocation.domain.value_objects.round_items import RoundItem
+from domain.value_objects.round_items import RoundItem
 
 
 @dataclass
 class Round:
-    created: date
+    created: datetime
     items: List[RoundItem]

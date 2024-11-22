@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from typing import Dict, Union
-from allocation.domain.value_objects.beers import Beer
+from domain.value_objects.beers import Beer
 
 
 @dataclass(frozen=True)

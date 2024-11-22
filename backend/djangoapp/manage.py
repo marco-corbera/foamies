@@ -2,6 +2,15 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+from repositories.orders import OrderRepository
+
+
+order_repository = OrderRepository()
+
+
+def get_order_repository():
+    """Expose the shared repository instance."""
+    return order_repository
 
 
 def main():

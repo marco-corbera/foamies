@@ -19,3 +19,7 @@ class OrderSerializer(serializers.Serializer):
     taxes = serializers.FloatField()
     discounts = serializers.FloatField()
     rounds = RoundSerializer(many=True)
+
+
+class OrderListSerializer(serializers.Serializer):
+    id = serializers.IntegerField()

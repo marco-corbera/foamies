@@ -17,9 +17,10 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from backfoam.views import OrderView
+from backfoam.views import OrderListView, OrderDetailView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/order/", OrderView.as_view(), name="order-list"),
+    path("api/orders/", OrderListView.as_view(), name="order-list"),
+    path("api/orders/<int:id>/", OrderDetailView.as_view(), name="order-detail"),
 ]
