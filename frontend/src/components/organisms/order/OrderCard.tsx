@@ -56,7 +56,7 @@ const OrderCard = ({
   );
 
   const items = rounds.map((round, index) => (
-    <div key={index} className="rounded-lg border p-4 my-8">
+    <div key={index} className="rounded-lg border p-4 my-4">
       <div className="flex items-center justify-between pb-4">
         <div className="flex items-center gap-2">
           <FaClock className="h-5 w-5" />
