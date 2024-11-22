@@ -11,8 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#9e60ff",
-        secondary: "#50c878",
+        primary: "#FFD700",
+        secondary: "#3498db",
       },
       spacing: {
         128: "32rem",

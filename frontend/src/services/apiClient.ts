@@ -1,9 +1,9 @@
 import { FETCH } from "@/services/fetchWrapper";
 
-const getOrderStatus = async (id: number) => {
+const getOrderStatus = async (id: string) => {
   try {
     const response = await FETCH({
-      endpoint: `/api/orders/${id}`,
+      endpoint: `/api/orders/${id}`
     });
     if (response.ok) {
       return response.data;
@@ -19,12 +19,12 @@ const getOrderStatus = async (id: number) => {
 const getOrders = async () => {
   try {
     const response = await FETCH({
-      endpoint: `/api/orders/`,
+      endpoint: "/api/orders"
     });
     if (response.ok) {
       return response.data;
     } else {
-      throw new Error(response.error || "Failed to fetch order status");
+      throw new Error(response.error || "Failed to fetch orders");
     }
   } catch (error) {
     console.error(error);

@@ -5,7 +5,7 @@ import type { IOrderData, IOrders } from "@/types/apiData";
 
 const HomePage: React.FC = async () => {
   const orders = await getOrders();
-  const orderData = await getOrderStatus(1);
+  const orderData = await getOrderStatus("1");
   return (
     <FoamHome
       orders={orders as IOrders[]}
